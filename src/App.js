@@ -3,6 +3,7 @@ import logo from "./img/logo.svg";
 import woman from "./img/woman.jpg";
 import "./styles/main.css";
 import DestinationCard from "./components/DestinationCard";
+import PropertyCard from "./components/PropertyCard";
 
 const popularDestination = [
   {
@@ -34,6 +35,41 @@ const popularDestination = [
     averagePrice: "700",
     propertyCount: "172",
     imageUrl: require("./img/newyork.jpg"),
+  },
+];
+const property = [
+  {
+    imageUrl: require("./img/morden-home.jpg"),
+    imageAlt: "Rear view of a modern home",
+    beds: 5,
+    baths: 4,
+    title: "Modern Home in city center",
+    priceInCents: "190000",
+    formatedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: require("./img/house.jpg"),
+    imageAlt: "Rear view of a modern home",
+    beds: 5,
+    baths: 4,
+    title: "Modern Home in city center",
+    priceInCents: "190000",
+    formatedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  },
+  {
+    imageUrl: require("./img/one-room.jpg"),
+    imageAlt: "Rear view of a modern home",
+    beds: 5,
+    baths: 4,
+    title: "Modern Home in city center",
+    priceInCents: "190000",
+    formatedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
   },
 ];
 function App() {
@@ -87,6 +123,17 @@ function App() {
             </div>
           ))}
         </div>
+        <h2 className="text-xl text-gray-900 pt-8">Properties</h2>
+        <p className="text-gray-600">
+          Checkout a list of Properties in friendly cities
+        </p>
+      </div>
+      <div className=" flex flex-wrap items-center justify-center p-8">
+        {property.map((properties) => (
+          <div className="mt-6 sm:w-16 px-4 sm:w-full lg:w-1/2 xl:w-1/3">
+            <PropertyCard property={properties} />
+          </div>
+        ))}
       </div>
     </div>
   );
