@@ -74,7 +74,7 @@ const property = [
 ];
 function App() {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-300 antialiased">
       <div className="bg-gray-100 flex">
         <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:w-full lg:w-1/2 lg:py-24 lg:px-12">
           <img src={logo} alt="logo" className="h-10 w-10 float-left" />
