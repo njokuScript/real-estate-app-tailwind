@@ -52,29 +52,29 @@ const property = [
   {
     imageUrl: require("./img/house.jpg"),
     imageAlt: "Rear view of a modern home",
-    beds: 5,
-    baths: 4,
-    title: "Modern Home in city center",
-    priceInCents: "190000",
-    formatedPrice: "$1,900.00",
-    reviewCount: 34,
+    beds: 15,
+    baths: 10,
+    title: "Estate in city center",
+    priceInCents: "520000",
+    formatedPrice: "$5,200.00",
+    reviewCount: 134,
     rating: 4,
   },
   {
     imageUrl: require("./img/one-room.jpg"),
     imageAlt: "Rear view of a modern home",
-    beds: 5,
-    baths: 4,
-    title: "Modern Home in city center",
-    priceInCents: "190000",
-    formatedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
+    beds: 2,
+    baths: 2,
+    title: "A morden Room and Parlour",
+    priceInCents: "110000",
+    formatedPrice: "$1,100.00",
+    reviewCount: 16,
+    rating: 2,
   },
 ];
 function App() {
   return (
-    <div className="bg-gray-300 antialiased">
+    <div className="bg-gray-300 antialiased text-gray-900">
       <div className="bg-gray-100 flex">
         <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:w-full lg:w-1/2 lg:py-24 lg:px-12">
           <img src={logo} alt="logo" className="h-10 w-10 float-left" />
