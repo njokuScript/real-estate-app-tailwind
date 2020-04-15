@@ -8,30 +8,35 @@ import PropertyCard from "./components/PropertyCard";
 
 const popularDestination = [
   {
+    id: 1,
     city: "dubai",
     averagePrice: "120",
     propertyCount: "76",
     imageUrl: require("./img/dubai.jpg"),
   },
   {
+    id: 2,
     city: "japan",
     averagePrice: "100",
     propertyCount: "24",
     imageUrl: require("./img/japan.jpg"),
   },
   {
+    id: 3,
     city: "Amsterdam",
     averagePrice: "450",
     propertyCount: "126",
     imageUrl: require("./img/amsterdam.jpg"),
   },
   {
+    id: 4,
     city: "Venice",
     averagePrice: "200",
     propertyCount: "91",
     imageUrl: require("./img/venice.jpg"),
   },
   {
+    id: 5,
     city: "New York",
     averagePrice: "700",
     propertyCount: "172",
@@ -40,6 +45,7 @@ const popularDestination = [
 ];
 const property = [
   {
+    id: 1,
     imageUrl: require("./img/morden-home.jpg"),
     imageAlt: "Rear view of a modern home",
     beds: 5,
@@ -51,6 +57,7 @@ const property = [
     rating: 4,
   },
   {
+    id: 2,
     imageUrl: require("./img/house.jpg"),
     imageAlt: "Rear view of a modern home",
     beds: 15,
@@ -62,6 +69,7 @@ const property = [
     rating: 4,
   },
   {
+    id: 3,
     imageUrl: require("./img/one-room.jpg"),
     imageAlt: "Rear view of a modern home",
     beds: 2,
@@ -121,7 +129,10 @@ function App() {
 
           <div className="flex flex-wrap -mx-4">
             {popularDestination.map((destination) => (
-              <div className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
+              <div
+                key={destination.id}
+                className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3"
+              >
                 <DestinationCard destination={destination} />
               </div>
             ))}
@@ -133,7 +144,10 @@ function App() {
         </div>
         <div className=" flex flex-wrap items-center justify-center p-8">
           {property.map((properties) => (
-            <div className="mt-6 sm:w-16 px-4 sm:w-full lg:w-1/2 xl:w-1/3">
+            <div
+              key={properties.id}
+              className="mt-6 sm:w-16 px-4 sm:w-full lg:w-1/2 xl:w-1/3"
+            >
               <PropertyCard property={properties} />
             </div>
           ))}

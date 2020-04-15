@@ -6,12 +6,12 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <header className=" bg-gray-900">
-        <header className="px-4 py-3 bg-gray-900 flex items-center justify-between">
+      <header className=" bg-gray-900 sm:flex sm:justify-between ">
+        <div className="px-4 py-3 bg-gray-900 flex items-center justify-between">
           <div>
             <img className="h-10 " src={logo} alt={logo} />
           </div>
-          <div>
+          <div className="sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -33,8 +33,10 @@ export default function NavBar() {
               </svg>
             </button>
           </div>
-        </header>
-        <div className={isOpen ? "px-2 pt-2 pb-4" : "hidden"}>
+        </div>
+        <div
+          className={isOpen ? "px-2 pt-2 pb-4 " : "hidden sm:block  sm:flex"}
+        >
           <button
             className="px-2 py-1 block text-white font-semibold hover:bg-gray-700 rounded"
             type="button"
@@ -42,13 +44,13 @@ export default function NavBar() {
             List your properties
           </button>
           <button
-            className="mt-1 px-2 py-1 block text-white font-semibold hover:bg-gray-700 rounded"
+            className="mt-1 px-2 py-1 block text-white font-semibold hover:bg-gray-700 rounded sm:mt-0 sm:ml-2"
             type="button"
           >
             Trips
           </button>
           <button
-            className="mt-2 px-2 py-1 block text-white font-semibold hover:bg-gray-700 rounded"
+            className="mt-2 px-2 py-1 block text-white font-semibold hover:bg-gray-700 rounded sm:mt-0 sm:ml-2"
             type="button"
           >
             Messages
