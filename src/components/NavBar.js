@@ -9,7 +9,7 @@ export default function NavBar() {
       <header className=" bg-gray-900 sm:flex sm:justify-between ">
         <div className="px-4 py-3 bg-gray-900 flex items-center justify-between">
           <div>
-            <img className="h-10 " src={logo} alt={logo} />
+            <img className="h-8 " src={logo} alt={logo} />
           </div>
           <div className="sm:hidden">
             <button
